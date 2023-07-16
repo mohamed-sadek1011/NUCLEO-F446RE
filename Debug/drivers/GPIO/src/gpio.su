@@ -1,0 +1,5 @@
+../drivers/GPIO/src/gpio.c:10:6:gpio_pin_mode	16	static
+../drivers/GPIO/src/gpio.c:50:6:gpio_pin_pull	16	static
+../drivers/GPIO/src/gpio.c:80:6:gpio_pin_write	16	static
+../drivers/GPIO/src/gpio.c:101:12:gpio_pin_read	16	static
+../drivers/GPIO/src/gpio.c:106:6:gpio_pin_af	16	static

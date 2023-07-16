@@ -1,0 +1,6 @@
+"./Src/main.o"
+"./Src/syscalls.o"
+"./Src/sysmem.o"
+"./Startup/startup_stm32f446retx.o"
+"./drivers/GPIO/src/gpio.o"
+"./drivers/RCC/src/rcc.o"
