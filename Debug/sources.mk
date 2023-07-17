@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (11.3.rel1)
+# Toolchain: GNU Tools for STM32 (10.3-2021.10)
 ################################################################################
 
 ELF_SRCS := 
@@ -26,4 +26,5 @@ Src \
 Startup \
 drivers/GPIO/src \
 drivers/RCC/src \
+drivers/TIM/src \
 

@@ -460,7 +460,73 @@ typedef struct
 #define GPIOG ((volatile gpio_t*)(GPIOE_BASE))
 #define GPIOH ((volatile gpio_t*)(GPIOH_BASE))
 
+//TIM Section
+
+//TIMx control register 1 (TIMx_CR1) Bits
+#define CEN		0
+#define UDIS	1
+#define URS		2
+#define OPM		3
+#define DIR		4
+#define CMS0	5
+#define CMS1	6
+#define ARPE	7
+#define CKD0	8
+#define CKD1	9
+
+//TIMx DMA/Interrupt enable register (TIMx_DIER) Bits
+#define UIE		0
+#define CC1IE	1
+#define CC2IE	2
+#define CC3IE	3
+#define CC4IE	4
+#define TIE		6
+#define UDE		8
+#define CC1DE	9
+#define CC2DE	10
+#define CC3DE	11
+#define CC4DE	12
+#define TDE		14
+
+//TIMx event generation register (TIMx_EGR)
+#define UG		0
+#define CC1G	1
+#define CC2G	2
+#define CC3G	3
+#define CC4G	4
+#define TG		6
 
 
+typedef struct
+{
+	volatile uint32_t TIMx_CR1;
+	volatile uint32_t TIMx_CR2;
+	volatile uint32_t TIMx_SMCR;
+	volatile uint32_t TIMx_DIER;
+	volatile uint32_t TIMx_SR;
+	volatile uint32_t TIMx_EGR;
+	volatile uint32_t TIMx_CCMR1;
+	volatile uint32_t TIMx_CCMR2;
+	volatile uint32_t TIMx_CCER;
+	volatile uint32_t TIMx_CNT;
+	volatile uint32_t TIMx_PSC;
+	volatile uint32_t TIMx_ARR;
+	volatile uint32_t reserved0;
+	volatile uint32_t TIMx_CCR1;
+	volatile uint32_t TIMx_CCR2;
+	volatile uint32_t TIMx_CCR3;
+	volatile uint32_t TIMx_CCR4;
+	volatile uint32_t reserved1;
+	volatile uint32_t TIMx_DCR;
+	volatile uint32_t TIMx_DMAR;
+	volatile uint32_t TIM2_OR;
+	volatile uint32_t TIM5_OR;
+
+}tim_2t5_t;
+
+#define TIM2 ((volatile tim_2t5_t*)(TIM2_BASE))
+#define TIM3 ((volatile tim_2t5_t*)(TIM3_BASE))
+#define TIM4 ((volatile tim_2t5_t*)(TIM4_BASE))
+#define TIM5 ((volatile tim_2t5_t*)(TIM5_BASE))
 
 #endif /* RD_RD_H_ */
