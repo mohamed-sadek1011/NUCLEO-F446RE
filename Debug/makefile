@@ -9,6 +9,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include drivers/USART/src/subdir.mk
 -include drivers/TIM/src/subdir.mk
 -include drivers/RCC/src/subdir.mk
 -include drivers/GPIO/src/subdir.mk

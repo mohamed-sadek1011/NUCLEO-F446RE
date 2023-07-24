@@ -27,4 +27,5 @@ Startup \
 drivers/GPIO/src \
 drivers/RCC/src \
 drivers/TIM/src \
+drivers/USART/src \
 

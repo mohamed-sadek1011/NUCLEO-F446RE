@@ -6,3 +6,4 @@
 "./drivers/RCC/src/rcc.o"
 "./drivers/TIM/src/stim.o"
 "./drivers/TIM/src/tim.o"
+"./drivers/USART/src/usart.o"

@@ -36,6 +36,14 @@
 #define TIM3_BASE	0x40000400
 #define TIM2_BASE	0x40000000
 
+#define USART6_BASE	0x40011400
+#define USART1_BASE	0x40011000
+#define USART3_BASE	0x40004800
+#define USART2_BASE	0x40004400
+
+#define UART5_BASE	0x40005000
+#define UART4_BASE	0x40004C00
+
 
 // RCC_CR
 #define HSION			0
@@ -528,5 +536,95 @@ typedef struct
 #define TIM3 ((volatile tim_2t5_t*)(TIM3_BASE))
 #define TIM4 ((volatile tim_2t5_t*)(TIM4_BASE))
 #define TIM5 ((volatile tim_2t5_t*)(TIM5_BASE))
+
+
+typedef struct
+{
+	volatile uint32_t USART_SR;
+	volatile uint32_t USART_DR;
+	volatile uint32_t USART_BRR;
+	volatile uint32_t USART_CR1;
+	volatile uint32_t USART_CR2;
+	volatile uint32_t USART_CR3;
+	volatile uint32_t USART_GTPR;
+
+}usart_t;
+
+#define USART6_BASE	0x40011400
+#define USART1_BASE	0x40011000
+#define USART3_BASE	0x40004800
+#define USART2_BASE	0x40004400
+
+#define UART5_BASE	0x40005000
+#define UART4_BASE	0x40004C00
+
+#define USART6 ((volatile usart_t*)(USART6_BASE))
+#define USART1 ((volatile usart_t*)(USART1_BASE))
+#define USART3 ((volatile usart_t*)(USART3_BASE))
+#define USART2 ((volatile usart_t*)(USART2_BASE))
+
+#define UART5 ((volatile usart_t*)(UART5_BASE))
+#define UART4 ((volatile usart_t*)(UART4_BASE))
+
+//USART_SR Status register Bits
+#define PE		0
+#define FE		1
+#define NF		2
+#define ORE		3
+#define IDLE	4
+#define RXNE	5
+#define TC		6
+#define TXE		7
+#define LBD		8
+#define CTS		9
+
+//USART_CR1 Control register 1 Bits
+#define SBK		0
+#define RWU		1
+#define RE		2
+#define TE		3
+#define IDLEIE	4
+#define RXNEIE	5
+#define TCIE	6
+#define TXEIE	7
+#define PEIE	8
+#define PS		9
+#define PCE		10
+#define WAKE	11
+#define M		12
+#define UE		13
+#define OVER8	15
+
+//USART_CR2 Control register 2 Bits
+#define ADD0	0
+#define ADD1	1
+#define ADD2	2
+#define ADD3	3
+#define LBDL	5
+#define LBDIE	6
+#define LBCL	8
+#define CPHA	9
+#define CPOL	10
+#define CLKEN	11
+#define STOP0	12
+#define STOP1	13
+#define LINEN	14
+
+//USART_CR3 Control register 3 Bits
+#define EIE		0
+#define IREN	1
+#define IRLP	2
+#define HDSEL	3
+#define NACK	4
+#define SCEN	5
+#define DMAR	6
+#define DMAT	7
+#define RTSE	8
+#define CTSE	9
+#define CTSIE	10
+#define ONEBIT	11
+
+
+
 
 #endif /* RD_RD_H_ */

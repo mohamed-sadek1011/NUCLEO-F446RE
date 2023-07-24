@@ -37,7 +37,7 @@ typedef enum
 
 typedef enum
 {
-	output_push_pull, output_open_drain, input, analog
+	output_push_pull, output_open_drain, input, af_push_pull, af_open_drain, analog
 }gpio_mode_t;
 
 typedef enum

@@ -27,6 +27,22 @@ void gpio_pin_mode(volatile gpio_t* GPIOx, gpio_pin_t pin, gpio_mode_t mode)
 		set_bit(GPIOx->GPIOx_OTYPER,pin);
 		break;
 
+	case af_push_pull:
+		//MODER 01: AF output mode
+		clr_bit(GPIOx->GPIOx_MODER, (pin*2));
+		set_bit(GPIOx->GPIOx_MODER, ((pin*2)+1));
+		//OT 0: Output push-pull
+		clr_bit(GPIOx->GPIOx_OTYPER,pin);
+		break;
+
+	case af_open_drain:
+		//MODER 01: AF output mode
+		clr_bit(GPIOx->GPIOx_MODER, (pin*2));
+		set_bit(GPIOx->GPIOx_MODER, ((pin*2)+1));
+		//OT 1: Output open-drain
+		set_bit(GPIOx->GPIOx_OTYPER,pin);
+		break;
+
 	case input:
 		//MODER 00: Input
 		clr_bit(GPIOx->GPIOx_MODER, (pin*2));

@@ -1,5 +1,5 @@
-gpio.c:10:6:gpio_pin_mode	5
-gpio.c:50:6:gpio_pin_pull	5
-gpio.c:80:6:gpio_pin_write	3
-gpio.c:101:12:gpio_pin_read	1
-gpio.c:106:6:gpio_pin_af	34
+gpio.c:10:6:gpio_pin_mode	7
+gpio.c:66:6:gpio_pin_pull	5
+gpio.c:96:6:gpio_pin_write	3
+gpio.c:117:12:gpio_pin_read	1
+gpio.c:122:6:gpio_pin_af	34
